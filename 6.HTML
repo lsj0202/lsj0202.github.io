@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tk{
+            text-align: center;
+            font-size: 18px;
+            color:gray;
+        }
+        .three{
+            background-color:aquamarine;
+        }
+        h3{
+            text-align: center;
+        }
+        .container{
+            width:1600px;
+            height: 100vh;
+            margin:0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 0.1fr);
+            grid-template-rows:auto 60px;
+        }
+        .navi{
+            height:60px;
+            padding-bottom:10px;
+            border-bottom:2px solid #ccc;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            border: 1px solid black;
+            background-color: beige;
+            z-index: 1;
+        }
+        .nav{
+            position:fixed;
+        }
+        .navi ul{
+            list-style:none;
+            padding-top:10px;
+            padding-bottom:5px;
+        }
+        .navi ul li{
+            display:inline;
+            width:150px;
+            padding:10px;
+        }
+        .navi a:link, a:visited{
+            font-size:14px;
+            padding:10px;
+            text-decoration: none;
+        }
+        .navi a:hover, a:focus{
+            background-color:darkgray;
+            color:white;
+        }
+        .navi a:active{
+            background-color: red;
+        }
+        .contents{
+            margin:160px 20px;
+            display:inline-block;
+            width:420px;
+            height: 300px;
+            padding:20px;
+            border:1px solid;
+            border-radius:5px;
+        }
+        #intro{
+            display: grid;
+            grid-template-rows: 60px auto;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        #intro h2{
+            grid-column: 1 / 3;
+        }
+        #intro ul{
+            list-style: none;
+        }
+        #intro:target{
+            background-color:rgb(255, 236, 124);
+        }
+        #intro li {
+            font-size: 20px;
+        }
+        #room:target{
+            background-color:rgb(255, 236, 124);
+        }
+        #reservation:target{
+            background-color:rgb(255,236,124);
+        }
+        
+        li a[href="https://store-kr.uniqlo.com/display/displayShop.lecs?storeNo=83&siteNo=50706&displayNo=NQ1A02A06A05"]::after{
+            content:"NEW!!";
+            font-size: x-small;
+            padding:2px, 4px;
+            margin: 0 10px;
+            background:red;
+            color:white;
+        }
+
+        footer{
+            grid-column: 1/5;
+            border:1px solid;
+            height:60px;
+        }
+
+        #reservation ul{
+            list-style: none;
+        }
+
+        #reservation li {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navi">
+            <ul>
+                <li><a href="#intro">신발 사이트</a></li>
+                <li><a href="#room">색감의 조화</a></li>
+                <li><a href="#reservation">패션 트렌드</a></li>
+                <li><a href="https://store-kr.uniqlo.com/display/displayShop.lecs?storeNo=83&siteNo=50706&displayNo=NQ1A02A06A05">신제품!</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div id="intro" class="contents">
+            <h2>신발 사이트</h2>
+            <div>
+                <ul>
+                    <li>
+                        <p><a href="https://www.nike.com/kr/ko_kr/">NIKE</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.vans.co.kr/">VANS</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.nbkorea.com/index.action">New Balance</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.off---white.com/en-kr/">Off White</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <p><a href="https://www.adidas.co.kr/">Adidas</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.fredperry.com/">Fred Perry</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://converse.co.kr/">Converse</a></p>
+                    </li>
+                    <li>
+                        <p><a href="https://www.fila.co.kr/main/main.asp">FILA</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="room" class="contents">
+            <h2>색감조화</h2>
+            <p>
+                <a href="https://www.medlabdesign.com/74">먼셀 색상환</a>
+                <div class="tk">
+                    <p>빨강(R) <----->청록(BG)</p>
+                    <p>자주(RP) <----->녹색(G)</p>
+                    <p>보라(P) <----->연두(GY)</p>
+                    <p>남색(PB) <----->노랑(Y)</p>
+                    <p>파랑(B) <----->주황(YR)</p>
+                </div>
+            </p>
+            <p></p>
+        </div>
+        <div id="reservation" class="contents">
+            <h2>패션 트렌드</h2>
+            <a href="https://m.blog.naver.com/mage7th/221701622366">패션 트렌드</a>
+                <ul>
+                    <li>
+                        <a href="https://www.fashionbeans.com/">패션빈즈</a><br>
+                        남성 패션과 스타일링, 스트리트 패션, 헤어 스타일링에 관한 조언을 얻을 수 있다.
+                    </li>
+                    <li>
+                        <a href="http://www.streetpeeper.com/">스트리트피퍼</a><br>
+                        뉴욕,런던,도쿄,서울 등 전 세계 스트리트 패션을 보여주는 사이트다.
+                    </li>
+                    <li>
+                        <a href="https://wear.jp/">웨어</a><br>
+                        일본 패션에 관심이 많은 사람들에게 유용한 사이트고 성인뿐만 아니라 아동 스트리트패션도 있다.
+                    </li>
+                </ul>   
+        </div>
+        <footer class="three">
+            
+            <script>
+                let username = null;
+                while(username === null || username === '')
+                    username = prompt("이름을 입력하세요.");
+                document.write(`<h3>${username}님, 환영합니다!<h3>`);
+            </script>
+        </footer>
+    </div>
+    
+</body>
+</html>

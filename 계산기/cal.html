@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap">
+        <h1>계산기</h1>
+        <form>
+            <p>첫번째 숫자 <br><input type="text" id="number1"></p>    
+            <p>두번째 숫자 <br><input type="text" id="number2"></p>
+            <p>
+                <input type="button" value="+" onclick="add()">
+                <input type="button" value="-" onclick="sub()">
+                <input type="button" value="*" onclick="multi()">
+                <input type="button" value="/" onclick="divi()">
+            </p>          
+            <p>결과 <input type="text" id="sum"></p>
+        </form>
+    </div>   
+    <script>
+        // 덧셈 함수
+        function add() {
+            var num1 = document.getElementById("number1").value;
+            var num2 = document.getElementById("number2").value;
+
+            var result = parseInt(num1) + parseInt(num2);
+            document.getElementById("sum").value = result;
+        }
+        // 뺄셈 함수
+        function sub() {
+            var num1 = document.getElementById("number1").value;
+            var num2 = document.getElementById("number2").value;
+
+            var result = parseInt(num1) - parseInt(num2);
+            document.getElementById("sum").value = result;
+        }
+        // 곱셈 함수
+        function multi() {
+            var num1 = document.getElementById("number1").value;
+            var num2 = document.getElementById("number2").value;
+
+            var result = parseInt(num1) * parseInt(num2);
+            document.getElementById("sum").value = result;
+        }
+        // 나눗셈 함수
+        function divi() {
+            var num1 = document.getElementById("number1").value;
+            var num2 = document.getElementById("number2").value;
+
+            var result = parseInt(num1) / parseInt(num2);
+            document.getElementById("sum").value = result;
+        }
+    </script> 
+</body>
+</html>

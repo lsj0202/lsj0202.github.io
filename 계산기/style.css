@@ -1,0 +1,43 @@
+
+body {
+    background-image:url("아인슈타인.jpg");
+}
+
+#wrap {
+    width: 400px;
+    border-radius: 5%;
+    height: 600px;
+    text-align: center;
+    margin: 0 auto;
+    background-color:#505050;
+    padding-top: 10px;
+}
+
+h1 {
+    color: #ffffff;
+    background-color: #1c1c1c;
+    border-radius: 5%;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+}
+
+form>p {
+    color: #ffffff;
+}
+form>p:nth-child(3) {
+    background: rgb(208, 208, 208);
+    padding:10px;
+    border-radius: 5%;
+    width: 180px;
+    height: 60px;
+    margin: 0 auto;
+    color: #000;
+}
+
+form>p:nth-child(4)>input {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    font-size: 20px;
+}
